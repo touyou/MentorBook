@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MentorBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H72-ho-xB0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="3K9-AX-gdV">
+                                <rect key="frame" x="20" y="752" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-9Y-aNQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="touchUpInsideBackButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdS-d9-k16"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo1-Vh-2Y7">
+                                        <rect key="frame" x="213" y="0.0" width="161" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="touchUpInsideNextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="feu-HX-ZNO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-EW-anR">
+                                <rect key="frame" x="163.5" y="508" width="87" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkG-eK-4lZ">
+                                <rect key="frame" x="171.5" y="561.5" width="71.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H72-ho-xB0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CnU-b2-wmx"/>
+                            <constraint firstItem="H72-ho-xB0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Dxx-Fa-tWe"/>
+                            <constraint firstItem="hkG-eK-4lZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5H-DM-IxO"/>
+                            <constraint firstItem="QYP-EW-anR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LqF-g0-aMc"/>
+                            <constraint firstItem="3K9-AX-gdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="P4E-Lo-PIi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3K9-AX-gdV" secondAttribute="trailing" constant="20" id="QNO-hs-wFG"/>
+                            <constraint firstItem="H72-ho-xB0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tap-nx-ggJ"/>
+                            <constraint firstItem="QYP-EW-anR" firstAttribute="top" secondItem="H72-ho-xB0" secondAttribute="bottom" constant="60" id="c26-Y3-s3I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3K9-AX-gdV" secondAttribute="bottom" constant="80" id="frg-Pr-tUa"/>
+                            <constraint firstItem="hkG-eK-4lZ" firstAttribute="top" secondItem="QYP-EW-anR" secondAttribute="bottom" constant="20" id="hhs-8q-yYR"/>
+                            <constraint firstItem="H72-ho-xB0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o9Y-Wb-mij"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="courseLabel" destination="QYP-EW-anR" id="X8s-As-GhS"/>
+                        <outlet property="imageView" destination="H72-ho-xB0" id="j2i-TW-A3G"/>
+                        <outlet property="nameLabel" destination="hkG-eK-4lZ" id="cOW-cd-lef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
